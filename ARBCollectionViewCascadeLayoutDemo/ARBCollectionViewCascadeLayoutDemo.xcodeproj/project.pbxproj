@@ -1,0 +1,387 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C8A5C2DA1724A3F4005EF681 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8A5C2D91724A3F4005EF681 /* UIKit.framework */; };
+		C8A5C2DC1724A3F4005EF681 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8A5C2DB1724A3F4005EF681 /* Foundation.framework */; };
+		C8A5C2DE1724A3F4005EF681 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8A5C2DD1724A3F4005EF681 /* CoreGraphics.framework */; };
+		C8A5C2E41724A3F4005EF681 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C8A5C2E21724A3F4005EF681 /* InfoPlist.strings */; };
+		C8A5C2E61724A3F4005EF681 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C8A5C2E51724A3F4005EF681 /* main.m */; };
+		C8A5C2EA1724A3F4005EF681 /* ARBCascadeDemoAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C8A5C2E91724A3F4005EF681 /* ARBCascadeDemoAppDelegate.m */; };
+		C8A5C2EC1724A3F5005EF681 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = C8A5C2EB1724A3F5005EF681 /* Default.png */; };
+		C8A5C2EE1724A3F5005EF681 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C8A5C2ED1724A3F5005EF681 /* Default@2x.png */; };
+		C8A5C2F01724A3F5005EF681 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C8A5C2EF1724A3F5005EF681 /* Default-568h@2x.png */; };
+		C8A5C2F31724A3F5005EF681 /* ARBCascadeDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C8A5C2F21724A3F5005EF681 /* ARBCascadeDemoViewController.m */; };
+		C8A5C3101724B0C2005EF681 /* libARBCollectionViewCascadeLayout.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C8A5C2FF1724A4AB005EF681 /* libARBCollectionViewCascadeLayout.a */; };
+		C8A5C3131724B980005EF681 /* ARBCascadeDemoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C8A5C3121724B980005EF681 /* ARBCascadeDemoCell.m */; };
+		C8A5C3161724B9B6005EF681 /* ARBCascadeDemoHeaderFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = C8A5C3151724B9B6005EF681 /* ARBCascadeDemoHeaderFooterView.m */; };
+		C8A5C3191724B9E3005EF681 /* ARBCascadeDemoHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = C8A5C3181724B9E3005EF681 /* ARBCascadeDemoHeaderView.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C8A5C30C1724A884005EF681 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C8A5C3081724A883005EF681 /* ARBCollectionViewCascadeLayout.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C8A5C2871724A2A2005EF681;
+			remoteInfo = ARBCollectionViewCascadeLayout;
+		};
+		C8A5C30E1724AEEB005EF681 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C8A5C3081724A883005EF681 /* ARBCollectionViewCascadeLayout.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = C8A5C2861724A2A2005EF681;
+			remoteInfo = ARBCollectionViewCascadeLayout;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		C8A5C2D61724A3F4005EF681 /* ARBCollectionViewCascadeLayoutDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ARBCollectionViewCascadeLayoutDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C8A5C2D91724A3F4005EF681 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		C8A5C2DB1724A3F4005EF681 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		C8A5C2DD1724A3F4005EF681 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		C8A5C2E11724A3F4005EF681 /* ARBCollectionViewCascadeLayoutDemo-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ARBCollectionViewCascadeLayoutDemo-Info.plist"; sourceTree = "<group>"; };
+		C8A5C2E31724A3F4005EF681 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		C8A5C2E51724A3F4005EF681 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		C8A5C2E71724A3F4005EF681 /* ARBCollectionViewCascadeLayoutDemo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ARBCollectionViewCascadeLayoutDemo-Prefix.pch"; sourceTree = "<group>"; };
+		C8A5C2E81724A3F4005EF681 /* ARBCascadeDemoAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ARBCascadeDemoAppDelegate.h; sourceTree = "<group>"; };
+		C8A5C2E91724A3F4005EF681 /* ARBCascadeDemoAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ARBCascadeDemoAppDelegate.m; sourceTree = "<group>"; };
+		C8A5C2EB1724A3F5005EF681 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		C8A5C2ED1724A3F5005EF681 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		C8A5C2EF1724A3F5005EF681 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		C8A5C2F11724A3F5005EF681 /* ARBCascadeDemoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ARBCascadeDemoViewController.h; sourceTree = "<group>"; };
+		C8A5C2F21724A3F5005EF681 /* ARBCascadeDemoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ARBCascadeDemoViewController.m; sourceTree = "<group>"; };
+		C8A5C2FF1724A4AB005EF681 /* libARBCollectionViewCascadeLayout.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libARBCollectionViewCascadeLayout.a; path = "../ARBCollectionViewCascadeLayout/build/Release-iphoneos/libARBCollectionViewCascadeLayout.a"; sourceTree = "<group>"; };
+		C8A5C3081724A883005EF681 /* ARBCollectionViewCascadeLayout.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ARBCollectionViewCascadeLayout.xcodeproj; path = ../../ARBCollectionViewCascadeLayout/ARBCollectionViewCascadeLayout.xcodeproj; sourceTree = "<group>"; };
+		C8A5C3111724B980005EF681 /* ARBCascadeDemoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARBCascadeDemoCell.h; sourceTree = "<group>"; };
+		C8A5C3121724B980005EF681 /* ARBCascadeDemoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARBCascadeDemoCell.m; sourceTree = "<group>"; };
+		C8A5C3141724B9B6005EF681 /* ARBCascadeDemoHeaderFooterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARBCascadeDemoHeaderFooterView.h; sourceTree = "<group>"; };
+		C8A5C3151724B9B6005EF681 /* ARBCascadeDemoHeaderFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARBCascadeDemoHeaderFooterView.m; sourceTree = "<group>"; };
+		C8A5C3171724B9E3005EF681 /* ARBCascadeDemoHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARBCascadeDemoHeaderView.h; sourceTree = "<group>"; };
+		C8A5C3181724B9E3005EF681 /* ARBCascadeDemoHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARBCascadeDemoHeaderView.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C8A5C2D31724A3F4005EF681 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C8A5C2DA1724A3F4005EF681 /* UIKit.framework in Frameworks */,
+				C8A5C2DC1724A3F4005EF681 /* Foundation.framework in Frameworks */,
+				C8A5C2DE1724A3F4005EF681 /* CoreGraphics.framework in Frameworks */,
+				C8A5C3101724B0C2005EF681 /* libARBCollectionViewCascadeLayout.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C8A5C2CD1724A3F4005EF681 = {
+			isa = PBXGroup;
+			children = (
+				C8A5C2DF1724A3F4005EF681 /* ARBCollectionViewCascadeLayoutDemo */,
+				C8A5C2D81724A3F4005EF681 /* Frameworks */,
+				C8A5C2D71724A3F4005EF681 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C8A5C2D71724A3F4005EF681 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C8A5C2D61724A3F4005EF681 /* ARBCollectionViewCascadeLayoutDemo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C8A5C2D81724A3F4005EF681 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C8A5C2FF1724A4AB005EF681 /* libARBCollectionViewCascadeLayout.a */,
+				C8A5C2D91724A3F4005EF681 /* UIKit.framework */,
+				C8A5C2DB1724A3F4005EF681 /* Foundation.framework */,
+				C8A5C2DD1724A3F4005EF681 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C8A5C2DF1724A3F4005EF681 /* ARBCollectionViewCascadeLayoutDemo */ = {
+			isa = PBXGroup;
+			children = (
+				C8A5C2E81724A3F4005EF681 /* ARBCascadeDemoAppDelegate.h */,
+				C8A5C2E91724A3F4005EF681 /* ARBCascadeDemoAppDelegate.m */,
+				C8A5C3111724B980005EF681 /* ARBCascadeDemoCell.h */,
+				C8A5C3121724B980005EF681 /* ARBCascadeDemoCell.m */,
+				C8A5C3141724B9B6005EF681 /* ARBCascadeDemoHeaderFooterView.h */,
+				C8A5C3151724B9B6005EF681 /* ARBCascadeDemoHeaderFooterView.m */,
+				C8A5C3171724B9E3005EF681 /* ARBCascadeDemoHeaderView.h */,
+				C8A5C3181724B9E3005EF681 /* ARBCascadeDemoHeaderView.m */,
+				C8A5C2F11724A3F5005EF681 /* ARBCascadeDemoViewController.h */,
+				C8A5C2F21724A3F5005EF681 /* ARBCascadeDemoViewController.m */,
+				C8A5C3071724A875005EF681 /* Libraries */,
+				C8A5C2E01724A3F4005EF681 /* Supporting Files */,
+			);
+			path = ARBCollectionViewCascadeLayoutDemo;
+			sourceTree = "<group>";
+		};
+		C8A5C2E01724A3F4005EF681 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C8A5C2E11724A3F4005EF681 /* ARBCollectionViewCascadeLayoutDemo-Info.plist */,
+				C8A5C2E21724A3F4005EF681 /* InfoPlist.strings */,
+				C8A5C2E51724A3F4005EF681 /* main.m */,
+				C8A5C2E71724A3F4005EF681 /* ARBCollectionViewCascadeLayoutDemo-Prefix.pch */,
+				C8A5C2EB1724A3F5005EF681 /* Default.png */,
+				C8A5C2ED1724A3F5005EF681 /* Default@2x.png */,
+				C8A5C2EF1724A3F5005EF681 /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C8A5C3071724A875005EF681 /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				C8A5C3081724A883005EF681 /* ARBCollectionViewCascadeLayout.xcodeproj */,
+			);
+			name = Libraries;
+			sourceTree = "<group>";
+		};
+		C8A5C3091724A883005EF681 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C8A5C30D1724A884005EF681 /* libARBCollectionViewCascadeLayout.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C8A5C2D51724A3F4005EF681 /* ARBCollectionViewCascadeLayoutDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C8A5C2FC1724A3F5005EF681 /* Build configuration list for PBXNativeTarget "ARBCollectionViewCascadeLayoutDemo" */;
+			buildPhases = (
+				C8A5C2D21724A3F4005EF681 /* Sources */,
+				C8A5C2D31724A3F4005EF681 /* Frameworks */,
+				C8A5C2D41724A3F4005EF681 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C8A5C30F1724AEEB005EF681 /* PBXTargetDependency */,
+			);
+			name = ARBCollectionViewCascadeLayoutDemo;
+			productName = ARBCollectionViewCascadeLayoutDemo;
+			productReference = C8A5C2D61724A3F4005EF681 /* ARBCollectionViewCascadeLayoutDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C8A5C2CE1724A3F4005EF681 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = ARB;
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = "Adam Becevello";
+			};
+			buildConfigurationList = C8A5C2D11724A3F4005EF681 /* Build configuration list for PBXProject "ARBCollectionViewCascadeLayoutDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = C8A5C2CD1724A3F4005EF681;
+			productRefGroup = C8A5C2D71724A3F4005EF681 /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = C8A5C3091724A883005EF681 /* Products */;
+					ProjectRef = C8A5C3081724A883005EF681 /* ARBCollectionViewCascadeLayout.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				C8A5C2D51724A3F4005EF681 /* ARBCollectionViewCascadeLayoutDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		C8A5C30D1724A884005EF681 /* libARBCollectionViewCascadeLayout.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libARBCollectionViewCascadeLayout.a;
+			remoteRef = C8A5C30C1724A884005EF681 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C8A5C2D41724A3F4005EF681 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C8A5C2E41724A3F4005EF681 /* InfoPlist.strings in Resources */,
+				C8A5C2EC1724A3F5005EF681 /* Default.png in Resources */,
+				C8A5C2EE1724A3F5005EF681 /* Default@2x.png in Resources */,
+				C8A5C2F01724A3F5005EF681 /* Default-568h@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C8A5C2D21724A3F4005EF681 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C8A5C2E61724A3F4005EF681 /* main.m in Sources */,
+				C8A5C2EA1724A3F4005EF681 /* ARBCascadeDemoAppDelegate.m in Sources */,
+				C8A5C2F31724A3F5005EF681 /* ARBCascadeDemoViewController.m in Sources */,
+				C8A5C3131724B980005EF681 /* ARBCascadeDemoCell.m in Sources */,
+				C8A5C3161724B9B6005EF681 /* ARBCascadeDemoHeaderFooterView.m in Sources */,
+				C8A5C3191724B9E3005EF681 /* ARBCascadeDemoHeaderView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C8A5C30F1724AEEB005EF681 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ARBCollectionViewCascadeLayout;
+			targetProxy = C8A5C30E1724AEEB005EF681 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C8A5C2E21724A3F4005EF681 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C8A5C2E31724A3F4005EF681 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C8A5C2FA1724A3F5005EF681 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/../ARBCollectionViewCascadeLayout/\"/**";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C8A5C2FB1724A3F5005EF681 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/../ARBCollectionViewCascadeLayout/\"/**";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C8A5C2FD1724A3F5005EF681 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ARBCollectionViewCascadeLayoutDemo/ARBCollectionViewCascadeLayoutDemo-Prefix.pch";
+				HEADER_SEARCH_PATHS = "\"$(TARGET_BUILD_DIR)/include/ARBCollectionViewCascadeLayout\"";
+				INFOPLIST_FILE = "ARBCollectionViewCascadeLayoutDemo/ARBCollectionViewCascadeLayoutDemo-Info.plist";
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		C8A5C2FE1724A3F5005EF681 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ARBCollectionViewCascadeLayoutDemo/ARBCollectionViewCascadeLayoutDemo-Prefix.pch";
+				HEADER_SEARCH_PATHS = "\"$(TARGET_BUILD_DIR)/include/ARBCollectionViewCascadeLayout\"";
+				INFOPLIST_FILE = "ARBCollectionViewCascadeLayoutDemo/ARBCollectionViewCascadeLayoutDemo-Info.plist";
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C8A5C2D11724A3F4005EF681 /* Build configuration list for PBXProject "ARBCollectionViewCascadeLayoutDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C8A5C2FA1724A3F5005EF681 /* Debug */,
+				C8A5C2FB1724A3F5005EF681 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C8A5C2FC1724A3F5005EF681 /* Build configuration list for PBXNativeTarget "ARBCollectionViewCascadeLayoutDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C8A5C2FD1724A3F5005EF681 /* Debug */,
+				C8A5C2FE1724A3F5005EF681 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C8A5C2CE1724A3F4005EF681 /* Project object */;
+}
