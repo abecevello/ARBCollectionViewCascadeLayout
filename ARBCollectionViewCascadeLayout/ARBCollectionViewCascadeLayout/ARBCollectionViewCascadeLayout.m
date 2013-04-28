@@ -9,10 +9,6 @@
 #import "ARBCollectionViewCascadeLayout.h"
 #import "ARBCollectionViewCascadeLayoutAttributes.h"
 
-#define kAnimationDuration 0.3f
-
-#define kPSCollectionViewCellReuseBufferRows 5
-
 NSString *const ARBCollectionViewCascadeLayoutHeaderFooter = @"headerFooter";
 
 NSUInteger const ARBCollectionViewCascadeLayoutHeaderItemNumber = 0;
@@ -28,7 +24,7 @@ NSUInteger const ARBCollectionViewCascadeLayoutFooterItemNumber = 1;
 	NSMutableArray *_sectionHeaders;
 	NSMutableArray *_sectionFooters;
 	NSMutableArray *_sectionColumnHeights; //contains an array of arrays, first array is positioned by section number, values are the heights of each column within each section
-	NSMutableDictionary *_sectionItems; //key is section number, value is array with position is by index, value is PSCollectionViewLayoutAttribute objects
+	NSMutableDictionary *_sectionItems; //key is section number, value is array with position by index, value is ARBCollectionViewCascadeLayoutAttribute objects
 	
 	BOOL _recalculateLayoutRequired;
 }
