@@ -1,8 +1,8 @@
 Overview
 ---
-ARBCollectionViewCascadeLayout is UICollectionView layout for displaying items in a Pinterest-style grid.  Unlike other similar UICollectionView layouts, ARBCollectionViewCascadeLayout supports multiple sections and section header/footer views. It also supports an overall header view, similar to a UITableView tableHeaderView.  In addition, there is full support for the insertItemsAtIndexPaths:, moveItemAtIndexPath:toIndexPath:, and deleteItemsAtIndexPaths: methods of UICollectionView.
+ARBCollectionViewCascadeLayout is UICollectionView layout for displaying items in a Pinterest-style grid.  Unlike other similar UICollectionView layouts, ARBCollectionViewCascadeLayout supports multiple sections and section header/footer views. In addition, there is full support for the insertItemsAtIndexPaths:, moveItemAtIndexPath:toIndexPath:, and deleteItemsAtIndexPaths: methods of UICollectionView, with animations when adding or removing items.
 
-The layout calculations are designed to be done in an efficient manner. Where possible, layout information is cached and only those cells that have been impacted by changes are recalculated.
+The layout calculations are designed to be done in an efficient manner. Where possible, layout information is cached and only those items that have been impacted by changes will have their positions recalculated.
 
 ARBCollectionViewCascadeLayout uses ARC and requires iOS 6+.
 
@@ -31,9 +31,9 @@ In order to use the layout, an instance must be created and the ARBCollectionVie
 	_collectionView.dataSource = self;
 	self.view = _collectionView;
 	
-	[_collectionView registerClass:[ARBCascadeDemoCell class] forCellWithReuseIdentifier:ARBCascadeDemoCellReuseIdentifier];
-	[_collectionView registerClass:[ARBCascadeDemoHeaderView class] forSupplementaryViewOfKind:ARBCollectionViewCascadeLayoutSupplementaryViewKindHeaderFooter withReuseIdentifier:ARBCascadeDemoHeaderReuseIdentifier];
-	[_collectionView registerClass:[ARBCascadeDemoHeaderFooterView class] forSupplementaryViewOfKind:ARBCollectionViewCascadeLayoutSupplementaryViewKindHeaderFooter withReuseIdentifier:ARBCascadeDemoFooterReuseIdentifier];
+	[_collectionView registerClass:[ARBCascadeDemoCell class] forCellWithReuseIdentifier:@"cellReuseIdentifier"];
+	[_collectionView registerClass:[ARBCascadeDemoHeaderView class] forSupplementaryViewOfKind:ARBCollectionViewCascadeLayoutHeaderFooter withReuseIdentifier:@"headerReuseIdentifier"];
+	[_collectionView registerClass:[ARBCascadeDemoHeaderFooterView class] forSupplementaryViewOfKind:ARBCollectionViewCascadeLayoutHeaderFooter withReuseIdentifier:@"footerReuseIdentifier"];
 ```
 
 ARBCollectionViewCascadeLayoutDelegate has a single required method.
@@ -41,13 +41,13 @@ ARBCollectionViewCascadeLayoutDelegate has a single required method.
 - (CGFloat)collectionView:(UICollectionView *)collectionView layout:(ARBCollectionViewCascadeLayout *)collectionViewLayout heightForItemAtIndexPath:(NSIndexPath *)indexPath;
 ```
 
-If the collection view will display section headers or footers, the optional delegate methods must be implemented.
+If the collection view will display section headers or footers, the optional delegate methods should be implemented.
 ```objc
 - (CGFloat)collectionView:(UICollectionView *)collectionView layout:(ARBCollectionViewCascadeLayout *)collectionViewLayout heightForHeaderInSection:(NSInteger)section;
 - (CGFloat)collectionView:(UICollectionView *)collectionView layout:(ARBCollectionViewCascadeLayout *)collectionViewLayout heightForFooterInSection:(NSInteger)section;
 ```
 
-Section header/footer view classes should be registered using the supplementary view kind value of ARBCollectionViewCascadeLayoutSupplementaryViewKindHeaderFooter. Section headers will have an index path with an item number of ARBCollectionViewCascadeLayoutHeaderItemNumber. Section footers will have an index path with an item number of ARBCollectionViewCascadeLayoutFooterItemNumber.
+Section header/footer view classes should be registered using the supplementary view kind value of ARBCollectionViewCascadeLayoutHeaderFooter. Section headers will have an index path with an item number of ARBCollectionViewCascadeLayoutHeaderItemNumber. Section footers will have an index path with an item number of ARBCollectionViewCascadeLayoutFooterItemNumber.
 
 Customizations
 ---
