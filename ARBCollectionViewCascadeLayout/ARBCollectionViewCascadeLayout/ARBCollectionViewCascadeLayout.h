@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-extern NSString *const ARBCollectionViewCascadeLayoutSupplementaryViewKindHeaderFooter;
+extern NSString *const ARBCollectionViewCascadeLayoutHeaderFooter;
 
 extern NSUInteger const ARBCollectionViewCascadeLayoutHeaderItemNumber;
 extern NSUInteger const ARBCollectionViewCascadeLayoutFooterItemNumber;

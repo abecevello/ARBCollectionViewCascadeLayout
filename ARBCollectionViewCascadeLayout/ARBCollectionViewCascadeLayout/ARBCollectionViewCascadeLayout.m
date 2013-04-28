@@ -13,7 +13,7 @@
 
 #define kPSCollectionViewCellReuseBufferRows 5
 
-NSString *const ARBCollectionViewCascadeLayoutSupplementaryViewKindHeaderFooter = @"headerFooter";
+NSString *const ARBCollectionViewCascadeLayoutHeaderFooter = @"headerFooter";
 
 NSUInteger const ARBCollectionViewCascadeLayoutHeaderItemNumber = 0;
 NSUInteger const ARBCollectionViewCascadeLayoutFooterItemNumber = 1;
@@ -78,6 +78,26 @@ NSUInteger const ARBCollectionViewCascadeLayoutFooterItemNumber = 1;
 	[self invalidateLayout];
 }
 
+- (void)invalidateLayout
+{
+	[super invalidateLayout];
+	
+	//UICollectionView has an issue where the supplementary views won't be removed from the view if
+	//the layout attributes objects aren't recreated every time invalidateLayout is called.
+	//This happens when inserting items causes the view to become outside the rect being drawn.
+	NSMutableArray *newSectionHeaders = [NSMutableArray arrayWithCapacity:[_sectionHeaders count]];
+	for (ARBCollectionViewCascadeLayoutAttributes *headerAttributes in _sectionHeaders) {
+		[newSectionHeaders addObject:[headerAttributes copy]];
+	}
+	_sectionHeaders = newSectionHeaders;
+	
+	NSMutableArray *newSectionFooters = [NSMutableArray arrayWithCapacity:[_sectionFooters count]];
+	for (ARBCollectionViewCascadeLayoutAttributes *footerAttributes in _sectionFooters) {
+		[newSectionFooters addObject:[footerAttributes copy]];
+	}
+	_sectionFooters = newSectionFooters;
+}
+
 #pragma mark - Setters
 
 - (void)setNumColumnsLandscape:(NSInteger)numColumnsLandscape
@@ -115,11 +135,11 @@ NSUInteger const ARBCollectionViewCascadeLayoutFooterItemNumber = 1;
 	//retrieve the section header and footers
 	for (NSInteger section = 0; section < _numSections; section++) {
 		NSIndexPath *headerIndexPath = [NSIndexPath indexPathForItem:ARBCollectionViewCascadeLayoutHeaderItemNumber inSection:section];
-		ARBCollectionViewCascadeLayoutAttributes *headerAttributes = [ARBCollectionViewCascadeLayoutAttributes layoutAttributesForSupplementaryViewOfKind:ARBCollectionViewCascadeLayoutSupplementaryViewKindHeaderFooter withIndexPath:headerIndexPath];
+		ARBCollectionViewCascadeLayoutAttributes *headerAttributes = [ARBCollectionViewCascadeLayoutAttributes layoutAttributesForSupplementaryViewOfKind:ARBCollectionViewCascadeLayoutHeaderFooter withIndexPath:headerIndexPath];
 		[_sectionHeaders addObject:headerAttributes];
 		
 		NSIndexPath *footerIndexPath = [NSIndexPath indexPathForItem:ARBCollectionViewCascadeLayoutFooterItemNumber inSection:section];
-		ARBCollectionViewCascadeLayoutAttributes *footerAttributes = [ARBCollectionViewCascadeLayoutAttributes layoutAttributesForSupplementaryViewOfKind:ARBCollectionViewCascadeLayoutSupplementaryViewKindHeaderFooter withIndexPath:footerIndexPath];
+		ARBCollectionViewCascadeLayoutAttributes *footerAttributes = [ARBCollectionViewCascadeLayoutAttributes layoutAttributesForSupplementaryViewOfKind:ARBCollectionViewCascadeLayoutHeaderFooter withIndexPath:footerIndexPath];
 		[_sectionFooters addObject:footerAttributes];
 	}
 	
@@ -376,6 +396,10 @@ NSUInteger const ARBCollectionViewCascadeLayoutFooterItemNumber = 1;
 
 - (UICollectionViewLayoutAttributes *)initialLayoutAttributesForAppearingSupplementaryElementOfKind:(NSString *)elementKind atIndexPath:(NSIndexPath *)indexPath
 {
+	if (_recalculateLayoutRequired) {
+		[self calculateLayout];
+	}
+	
 	ARBCollectionViewCascadeLayoutAttributes *attributes = nil;
 	if (indexPath.item == ARBCollectionViewCascadeLayoutHeaderItemNumber) {
 		attributes = [self sectionHeaderAttributesForSection:indexPath.section];

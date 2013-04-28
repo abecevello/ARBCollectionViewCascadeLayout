@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:ARBCollectionViewCascadeLayout/ARBCollectionViewCascadeLayout.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:ARBCollectionViewCascadeLayoutDemo/ARBCollectionViewCascadeLayoutDemo.xcodeproj">
    </FileRef>
 </Workspace>
