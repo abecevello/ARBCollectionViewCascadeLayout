@@ -25,7 +25,7 @@
 		
         _title = [[UILabel alloc] initWithFrame:CGRectZero];
 		_title.backgroundColor = [UIColor clearColor];
-		_title.textAlignment = NSTextAlignmentCenter;
+		_title.textAlignment = NSTextAlignmentLeft;
 		[self addSubview:_title];
 		
 		_bottomSeparator = [[UIView alloc] initWithFrame:CGRectZero];
@@ -51,7 +51,7 @@
 	CGFloat width = CGRectGetWidth(bounds);
 	
 	_topSeparator.frame = CGRectMake(xOffset, CGRectGetMinY(bounds), width, 1.0f);
-	_title.frame = bounds;
+	_title.frame = CGRectInset(bounds, 10.0f, 0.0f);
 	_bottomSeparator.frame = CGRectMake(xOffset, CGRectGetMaxY(bounds) - 1.0f, width, 1.0f);
 }
 
