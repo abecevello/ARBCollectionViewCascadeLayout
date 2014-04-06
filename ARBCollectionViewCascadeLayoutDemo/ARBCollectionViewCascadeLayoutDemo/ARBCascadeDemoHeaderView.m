@@ -12,7 +12,7 @@ CGFloat const ARBCascadeHeaderViewPadding = 10.0f;
 
 @implementation ARBCascadeDemoHeaderView
 
-- (id)initWithFrame:(CGRect)frame
+- (instancetype)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
     if (self) {
