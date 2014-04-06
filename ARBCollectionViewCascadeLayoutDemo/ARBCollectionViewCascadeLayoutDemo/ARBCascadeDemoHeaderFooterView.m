@@ -8,6 +8,9 @@
 
 #import "ARBCascadeDemoHeaderFooterView.h"
 
+CGFloat const ARBCascadeDemoHeaderSeparatorHeight = 1.0f;
+CGFloat const ARBCascadeHeaderViewPadding = 10.0f;
+
 @implementation ARBCascadeDemoHeaderFooterView {
 	UIView *_topSeparator;
 	UIView *_bottomSeparator;
@@ -50,9 +53,9 @@
 	CGFloat xOffset = CGRectGetMinX(bounds);
 	CGFloat width = CGRectGetWidth(bounds);
 	
-	_topSeparator.frame = CGRectMake(xOffset, CGRectGetMinY(bounds), width, 1.0f);
-	_title.frame = CGRectInset(bounds, 10.0f, 0.0f);
-	_bottomSeparator.frame = CGRectMake(xOffset, CGRectGetMaxY(bounds) - 1.0f, width, 1.0f);
+	_topSeparator.frame = CGRectMake(xOffset, CGRectGetMinY(bounds), width, ARBCascadeDemoHeaderSeparatorHeight);
+	_title.frame = CGRectInset(bounds, ARBCascadeHeaderViewPadding, 0.0f);
+	_bottomSeparator.frame = CGRectMake(xOffset, CGRectGetMaxY(bounds) - ARBCascadeDemoHeaderSeparatorHeight, width, ARBCascadeDemoHeaderSeparatorHeight);
 }
 
 @end

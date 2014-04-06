@@ -8,12 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@class ARBCascadeDemoViewController;
-
 @interface ARBCascadeDemoAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
-
-@property (strong, nonatomic) ARBCascadeDemoViewController *viewController;
 
 @end

@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
+extern CGFloat const ARBCascadeHeaderViewPadding;
+
 @interface ARBCascadeDemoHeaderFooterView : UICollectionReusableView
 
 @property (nonatomic, readonly, strong) UILabel *title;

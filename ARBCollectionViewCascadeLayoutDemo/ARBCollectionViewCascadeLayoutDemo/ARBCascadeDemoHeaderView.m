@@ -8,8 +8,6 @@
 
 #import "ARBCascadeDemoHeaderView.h"
 
-CGFloat const ARBCascadeHeaderViewPadding = 10.0f;
-
 @implementation ARBCascadeDemoHeaderView
 
 - (instancetype)initWithFrame:(CGRect)frame
@@ -31,20 +29,27 @@ CGFloat const ARBCascadeHeaderViewPadding = 10.0f;
 {
 	[super prepareForReuse];
 	
-	_section = 0;
+	self.section = 0;
 }
 
 - (void)layoutSubviews
 {
 	[super layoutSubviews];
 	
-	[_addButton sizeToFit];
-	[_removeButton sizeToFit];
-	
 	CGRect bounds = self.bounds;
 	CGFloat midY = CGRectGetMidY(bounds);
-	_removeButton.frame = CGRectMake(CGRectGetMaxX(bounds) - _removeButton.frame.size.width - ARBCascadeHeaderViewPadding, roundf(midY - _removeButton.frame.size.height * 0.5f), _removeButton.frame.size.width, _removeButton.frame.size.height);
-	_addButton.frame = CGRectMake(CGRectGetMinX(_removeButton.frame) - _addButton.frame.size.width - ARBCascadeHeaderViewPadding, CGRectGetMinY(_removeButton.frame), _addButton.frame.size.width, _addButton.frame.size.height);
+	
+	[_removeButton sizeToFit];
+	CGRect removeButtonFrame = _removeButton.frame;
+	removeButtonFrame.origin.x = CGRectGetMaxX(bounds) - removeButtonFrame.size.width - ARBCascadeHeaderViewPadding;
+	removeButtonFrame.origin.y = roundf(midY - removeButtonFrame.size.height * 0.5f);
+	_removeButton.frame = removeButtonFrame;
+	
+	[_addButton sizeToFit];
+	CGRect addButtonFrame = _addButton.frame;
+	addButtonFrame.origin.x = CGRectGetMinX(_removeButton.frame) - addButtonFrame.size.width - ARBCascadeHeaderViewPadding;
+	addButtonFrame.origin.y = roundf(midY - addButtonFrame.size.height * 0.5f);
+	_addButton.frame = addButtonFrame;
 }
 
 @end

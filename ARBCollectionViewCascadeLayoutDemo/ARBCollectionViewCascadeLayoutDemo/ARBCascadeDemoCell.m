@@ -16,7 +16,8 @@
     if (self) {
 		self.backgroundColor = [UIColor greenColor];
 		
-        _title = [[UILabel alloc] initWithFrame:CGRectZero];
+        _title = [[UILabel alloc] initWithFrame:self.contentView.bounds];
+		_title.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
 		_title.backgroundColor = [UIColor clearColor];
 		_title.textAlignment = NSTextAlignmentCenter;
 		[self.contentView addSubview:_title];
@@ -29,13 +30,6 @@
 	[super prepareForReuse];
 	
 	_title.text = nil;
-}
-
-- (void)layoutSubviews
-{
-	[super layoutSubviews];
-	
-	_title.frame = self.contentView.bounds;
 }
 
 @end

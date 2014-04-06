@@ -10,6 +10,12 @@
 
 #import "ARBCascadeDemoViewController.h"
 
+@interface ARBCascadeDemoAppDelegate ()
+
+@property (strong, nonatomic) ARBCascadeDemoViewController *viewController;
+
+@end
+
 @implementation ARBCascadeDemoAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions

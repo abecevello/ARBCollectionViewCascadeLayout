@@ -245,7 +245,7 @@ NSUInteger const ARBCollectionViewCascadeLayoutFooterItemNumber = 1;
 	_currentNumColumns = landscape ? _numColumnsLandscape : _numColumnsPortrait;
 	if (_currentColumnWidth == 0.0f || [_columnXOffsets count] != _currentNumColumns) {
 		//item width is the total width, minus the padding between columns, divided by the number of columns
-		_currentColumnWidth = floor((CGRectGetWidth(self.collectionView.bounds) - (_currentNumColumns + 1) * self.itemPadding) / _currentNumColumns);
+		_currentColumnWidth = floorf((CGRectGetWidth(self.collectionView.bounds) - (_currentNumColumns + 1) * self.itemPadding) / _currentNumColumns);
 		
 		[self resetColumnHeights];
 		[self resetSectionHeadersFooters];

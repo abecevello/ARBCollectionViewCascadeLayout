@@ -87,17 +87,10 @@ NSString *const ARBCascadeDemoFooterReuseIdentifier = @"ARBCascadeDemoFooter";
 	ARBCascadeDemoHeaderView *headerView = (ARBCascadeDemoHeaderView *)[sender superview];
 	NSInteger section = headerView.section;
 	
-	NSMutableArray *sectionData = nil;
-	NSMutableArray *sectionDataHeights = nil;
-	if (section == 0) {
-		sectionData = _sampleDataSection1;
-		sectionDataHeights = _sampleDataSection1Heights;
-	} else if (section == 1) {
-		sectionData = _sampleDataSection2;
-		sectionDataHeights = _sampleDataSection2Heights;
-	}
+	NSMutableArray *sectionData = [self dataForSection:section];
+	NSMutableArray *sectionDataHeights = [self heightsForSection:section];
 	
-	//this always adds the item into the 4th position of the section, however items can be added anywhere within the collection view
+	//this always adds the item at the beginning of the section, however items can be added anywhere within the collection view
 	NSString *itemToAdd = [NSString stringWithFormat:@"Section %zd, Item %zd", section, [sectionData count]];
 	[sectionData insertObject:itemToAdd atIndex:0];
 	[sectionDataHeights insertObject:@([self randomHeight]) atIndex:0];
@@ -109,15 +102,8 @@ NSString *const ARBCascadeDemoFooterReuseIdentifier = @"ARBCascadeDemoFooter";
 	ARBCascadeDemoHeaderView *headerView = (ARBCascadeDemoHeaderView *)[sender superview];
 	NSInteger section = headerView.section;
 	
-	NSMutableArray *sectionData = nil;
-	NSMutableArray *sectionDataHeights = nil;
-	if (section == 0) {
-		sectionData = _sampleDataSection1;
-		sectionDataHeights = _sampleDataSection1Heights;
-	} else if (section == 1) {
-		sectionData = _sampleDataSection2;
-		sectionDataHeights = _sampleDataSection2Heights;
-	}
+	NSMutableArray *sectionData = [self dataForSection:section];
+	NSMutableArray *sectionDataHeights = [self heightsForSection:section];
 	
 	//this always removes an item from the 6th position of the section, however items can be removed anywhere within the collection view
 	if ([sectionData count] > 6) {
@@ -136,26 +122,15 @@ NSString *const ARBCascadeDemoFooterReuseIdentifier = @"ARBCascadeDemoFooter";
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-	if (section == 0) {
-		return [_sampleDataSection1 count];
-	} else if (section == 1) {
-		return [_sampleDataSection2 count];
-	} else {
-		return 0;
-	}
+	NSArray *sectionData = [self dataForSection:section];
+	return [sectionData count];
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
 	ARBCascadeDemoCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:ARBCascadeDemoCellReuseIdentifier forIndexPath:indexPath];
 	
-	NSArray *sectionData = nil;
-	if (indexPath.section == 0) {
-		sectionData = _sampleDataSection1;
-	} else if (indexPath.section == 1) {
-		sectionData = _sampleDataSection2;
-	}
-	
+	NSArray *sectionData = [self dataForSection:indexPath.section];
 	cell.title.text = sectionData[indexPath.item];
 	
 	return cell;
@@ -184,12 +159,7 @@ NSString *const ARBCascadeDemoFooterReuseIdentifier = @"ARBCascadeDemoFooter";
 - (CGFloat)collectionView:(UICollectionView *)collectionView layout:(ARBCollectionViewCascadeLayout *)collectionViewLayout heightForItemAtIndexPath:(NSIndexPath *)indexPath
 {
 	//calculates a random height for each cell to simulate different height images in each cell
-	NSArray *heights = nil;
-	if (indexPath.section == 0) {
-		heights = _sampleDataSection1Heights;
-	} else if (indexPath.section == 1) {
-		heights = _sampleDataSection2Heights;
-	}
+	NSArray *heights = [self heightsForSection:indexPath.section];
 	return [heights[indexPath.item] floatValue];
 }
 
@@ -201,6 +171,30 @@ NSString *const ARBCascadeDemoFooterReuseIdentifier = @"ARBCascadeDemoFooter";
 - (CGFloat)collectionView:(UICollectionView *)collectionView layout:(ARBCollectionViewCascadeLayout *)collectionViewLayout heightForFooterInSection:(NSInteger)section
 {
 	return 75.0f;
+}
+
+#pragma mark - Helpers
+
+- (NSMutableArray *)dataForSection:(NSInteger)section
+{
+	NSMutableArray *sectionData = nil;
+	if (section == 0) {
+		sectionData = _sampleDataSection1;
+	} else if (section == 1) {
+		sectionData = _sampleDataSection2;
+	}
+	return sectionData;
+}
+
+- (NSMutableArray *)heightsForSection:(NSInteger)section
+{
+	NSMutableArray *heights = nil;
+	if (section == 0) {
+		heights = _sampleDataSection1Heights;
+	} else if (section == 1) {
+		heights = _sampleDataSection2Heights;
+	}
+	return heights;
 }
 
 @end
