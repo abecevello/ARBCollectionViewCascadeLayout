@@ -63,13 +63,13 @@ NSString *const ARBCascadeDemoFooterReuseIdentifier = @"ARBCascadeDemoFooter";
 	_sampleDataSection1 = [NSMutableArray array];
 	_sampleDataSection1Heights = [NSMutableArray array];
 	for (NSInteger i = 0; i < ARBCascadeDemoSampleDataSizeSection1; i++) {
-		[_sampleDataSection1 addObject:[NSString stringWithFormat:@"Section 0, Item %d", i]];
+		[_sampleDataSection1 addObject:[NSString stringWithFormat:@"Section 0, Item %zd", i]];
 		[_sampleDataSection1Heights addObject:@([self randomHeight])];
 	}
 	_sampleDataSection2 = [NSMutableArray array];
 	_sampleDataSection2Heights = [NSMutableArray array];
 	for (NSInteger i = 0; i < ARBCascadeDemoSampleDataSizeSection2; i++) {
-		[_sampleDataSection2 addObject:[NSString stringWithFormat:@"Section 1, Item %d", i]];
+		[_sampleDataSection2 addObject:[NSString stringWithFormat:@"Section 1, Item %zd", i]];
 		[_sampleDataSection2Heights addObject:@([self randomHeight])];
 	}
 }
@@ -98,7 +98,7 @@ NSString *const ARBCascadeDemoFooterReuseIdentifier = @"ARBCascadeDemoFooter";
 	}
 	
 	//this always adds the item into the 4th position of the section, however items can be added anywhere within the collection view
-	NSString *itemToAdd = [NSString stringWithFormat:@"Section %d, Item %d", section, [sectionData count]];
+	NSString *itemToAdd = [NSString stringWithFormat:@"Section %zd, Item %zd", section, [sectionData count]];
 	[sectionData insertObject:itemToAdd atIndex:0];
 	[sectionDataHeights insertObject:@([self randomHeight]) atIndex:0];
 	[_collectionView insertItemsAtIndexPaths:@[[NSIndexPath indexPathForItem:0 inSection:section]]];
@@ -166,14 +166,14 @@ NSString *const ARBCascadeDemoFooterReuseIdentifier = @"ARBCascadeDemoFooter";
 	UICollectionReusableView *view = nil;
 	if (indexPath.item == ARBCollectionViewCascadeLayoutHeaderItemNumber) {
 		ARBCascadeDemoHeaderView *headerView = [_collectionView dequeueReusableSupplementaryViewOfKind:ARBCollectionViewCascadeLayoutHeaderFooter withReuseIdentifier:ARBCascadeDemoHeaderReuseIdentifier forIndexPath:indexPath];
-		headerView.title.text = [NSString stringWithFormat:@"Header for section %d", indexPath.section];
+		headerView.title.text = [NSString stringWithFormat:@"Header for section %zd", indexPath.section];
 		headerView.section = indexPath.section;
 		[headerView.addButton addTarget:self action:@selector(addItems:) forControlEvents:UIControlEventTouchUpInside];
 		[headerView.removeButton addTarget:self action:@selector(removeItems:) forControlEvents:UIControlEventTouchUpInside];
 		view = headerView;
 	} else if (indexPath.item == ARBCollectionViewCascadeLayoutFooterItemNumber) {
 		ARBCascadeDemoHeaderFooterView *footerView = [_collectionView dequeueReusableSupplementaryViewOfKind:ARBCollectionViewCascadeLayoutHeaderFooter withReuseIdentifier:ARBCascadeDemoFooterReuseIdentifier forIndexPath:indexPath];
-		footerView.title.text = [NSString stringWithFormat:@"Footer for section %d", indexPath.section];
+		footerView.title.text = [NSString stringWithFormat:@"Footer for section %zd", indexPath.section];
 		view = footerView;
 	}
 	return view;
