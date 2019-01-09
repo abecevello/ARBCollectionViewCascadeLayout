@@ -1,3 +1,5 @@
+## This project is considered deprecated and is no longer being maintained. It is kept for historical reference only.
+
 Overview
 ---
 ARBCollectionViewCascadeLayout is UICollectionView layout for displaying items in a Pinterest-style grid.  Unlike other similar UICollectionView layouts, ARBCollectionViewCascadeLayout supports multiple sections and section header/footer views. In addition, there is full support for the insertItemsAtIndexPaths:, moveItemAtIndexPath:toIndexPath:, and deleteItemsAtIndexPaths: methods of UICollectionView, with animations when adding or removing items.
